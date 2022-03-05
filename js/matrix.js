@@ -12,6 +12,7 @@ function generateMatrix(w,h) {
     }
     nodes[(int)(h / 3)][(int)(w / 3)].setStart();
     nodes[nodes.length - 1][nodes[0].length - 1].setEnd();
+    
 
 }
 

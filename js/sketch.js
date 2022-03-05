@@ -4,7 +4,7 @@ let canCreateWall = false;
 let canRemoveWall = false;
 let canSetStart = false;
 let canSetEnd = false;
-
+let canvas;
 
 
 // let searchIndicator = document.querySelector('#isSearching');
@@ -13,16 +13,15 @@ let remWallButton = document.querySelector('#removeWall');
 let startButton = document.querySelector('#setStart');
 let endButton = document.querySelector('#setEnd');
 
-const nodes = [];
+var nodes=[];
 function setup() { 
     var canvasW = innerWidth-(innerWidth%res), canvasH = innerHeight-(innerHeight%res);
-    console.log(innerHeight);
-    console.log(innerHeight%res);
-    const canvas = createCanvas(canvasW-res, canvasH-(150-(150%res)));
+    
+    canvas = createCanvas(canvasW-res, canvasH-(150-(150%res)));
     w = width / res;
     h = height / res;
     canvas.parent('canvas');
-    generateMatrix(w,h);
+    generateMatrix(w, h);
 }
 
 function sleep(ms) {
@@ -102,6 +101,7 @@ function draw() {
     // searchIndicator.textContent = isSearching;
     drawGrid();
 }
+
 
 function drawGrid() {
     background(200);

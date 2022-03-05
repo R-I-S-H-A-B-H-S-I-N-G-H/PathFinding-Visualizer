@@ -20,6 +20,8 @@ body{
     font-weight: bold;
     padding: .5rem;
     border-radius: .4rem;
+    transition: 250ms ease-in-out;
+
 }
 .navbar{
     background: orange;
@@ -29,6 +31,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 250ms ease-in-out;
+
 }
 .wallSwitch{
     background: lightcoral;
@@ -38,6 +42,8 @@ body{
     justify-content: center;
     margin: .3rem .2rem .3rem .2rem;
     border-radius: .5rem;
+    transition: 250ms ease-in-out;
+
 }
 
 .buttons{
@@ -45,18 +51,30 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 250ms ease-in-out;
+
+
+}
+
+label{
+    margin-right: .3rem;
+    font-size: clamp(.7rem,1.0vw,4rem);
+    font-weight: bold;  
+    transition: 250ms ease-in-out;
 
 }
 button{
     background:lightgreen;
+    font-weight: bold;
     border-style: solid;
     padding: .3rem;
     border-radius: .4rem;
     border-color: darkgreen;
 
 }
-label{
-    margin-right: .3rem;
-    font-size: clamp(.7rem,1.2vw,4rem);
-    font-weight: bold;   
+button:hover{
+    cursor: pointer;
+    background:darkgreen;
+    color: aliceblue;
+
 }
