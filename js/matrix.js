@@ -1,6 +1,21 @@
 let start = undefined, end = undefined;
 var delay = 10;
 let isSearching = false;
+function generateMatrix(w,h) {   
+    for (let y = 0; y < h; y++) {
+        let temp = [];
+        for (let x = 0; x < w; x++) {
+            let n = new Node(x, y, res)
+            temp.push(n);
+        }
+        nodes.push(temp);
+    }
+    nodes[(int)(h / 3)][(int)(w / 3)].setStart();
+    nodes[nodes.length - 1][nodes[0].length - 1].setEnd();
+
+}
+
+
 function getNeighbours(x, y) { 
     const neighbours = [];
    

@@ -19,7 +19,10 @@ class Node {
         this.open = false;
         this.close = false;
 
-        if (random() <= 0.4) { 
+        
+    }
+    randomize(n=4) {
+        if (random() <= n/10) { 
             this.wall=true;
         }
     }
@@ -32,7 +35,7 @@ class Node {
         this.close = false;
     }
     setWall(val) { 
-        if (!this.start && !this.end) {
+        if (!this.start && !this.end&&!isSearching) {
             this.wall = val
         } else { 
             console.log('cannot update this cause not wall');
@@ -43,14 +46,22 @@ class Node {
         this.start = val;
     }
     setEnd_util(val) {
+        if (isSearching) { 
+            console.log('cannon set end');
+            return;
+        }
         this.end = val;
     }
-    setStart() { 
+    setStart() {
+        
+        if (isSearching) {
+            return;
+        }
         for (let y = 0; y < h; y++) {
-            for (let x = 0; x < w; x++) { 
+            for (let x = 0; x < w; x++) {
                 nodes[y][x].setStart_util(false);
             }
-        }   
+        }
         this.setWall(false);
         this.setStart_util(true);
         start = this;
@@ -60,6 +71,9 @@ class Node {
         return this;
     }
     setEnd() { 
+        if (isSearching) { 
+            return;
+        }
         for (let y = 0; y < h; y++) {
             for (let x = 0; x < w; x++) { 
                 nodes[y][x].setEnd_util(false);

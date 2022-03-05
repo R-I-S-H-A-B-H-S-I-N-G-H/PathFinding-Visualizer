@@ -17,48 +17,64 @@
     <title>Pathfinding</title>
 </head>
 <body>
-    <div style="display: flex;">
+    <!-- <div style="display: flex;">
     <h1 >isSearching :</h1>
-    <h1 id="isSearching"></h1>
+    <h1 id="isSearching"></h1> -->
     </div>
     <div class="navbar">
+        <header class="heading">Pathfinding Visualizer</header>
         <div class="buttons">
                 <div class="wallSwitch">
-                    <label for="removeWall">Remove Wall</label>
                     <input type="checkbox" name="removeWall"
                     id="removeWall"
                     onchange="removeWallHandler()"
                     >
+                    <label for="removeWall">Remove Wall</label>
+
                 </div>
                 <div class="wallSwitch">
-                    <label for="createWall">Create
-                    WALL</label>
+                   
                     <input type="checkbox" name="createWall"
                     id="createWall"
                     onchange="createWallHandler()"
                     >
+                     <label for="createWall">Create
+                    WALL</label>
                 </div>
 
 
                 <div class="wallSwitch">
-                    <label for="setStart">Set Start</label>
                     <input type="checkbox" name="setStart"
                     id="setStart"
                     onchange="setStartHandler()"
                     >
+                    <label for="setStart">Set Start</label>
+
                 </div>
                 <div class="wallSwitch">
-                    <label for="setEnd">setEnd</label>
                     <input type="checkbox" name="setEnd"
                     id="setEnd"
                     onchange="setEndHandler()"
                     >
+                    <label for="setEnd">setEnd</label>
+
                 </div>
-                <button
-                onclick="bfs()">BFS</button>
-                <button onclick="astar()">ASTAR</button>
+                
+               
+                
+
+                
         </div>
+         <div class="algoArea">
+                    <button
+                    onclick="bfs()">BFS</button>
+                    <button
+                    onclick="astar()">ASTAR</button>
+                </div>
+        
     </div>
+
+    <!--? here canvas -->
     <div id="canvas" class="canvas"></div>
     
 </body>

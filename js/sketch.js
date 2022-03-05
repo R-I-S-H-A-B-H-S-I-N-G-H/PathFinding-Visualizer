@@ -7,7 +7,7 @@ let canSetEnd = false;
 
 
 
-let searchIndicator = document.querySelector('#isSearching');
+// let searchIndicator = document.querySelector('#isSearching');
 let wallButton = document.querySelector('#createWall');
 let remWallButton = document.querySelector('#removeWall');
 let startButton = document.querySelector('#setStart');
@@ -22,16 +22,7 @@ function setup() {
     w = width / res;
     h = height / res;
     canvas.parent('canvas');
-    for (let y = 0; y < h; y++) {
-        let temp = [];
-        for (let x = 0; x < w;x++) {
-            let n =new Node(x , y , res)
-            temp.push(n);
-        }
-        nodes.push(temp);
-    }
-    nodes[(int)(h/3)][(int)(w/3)].setStart();
-    nodes[nodes.length-1][nodes[0].length-1].setEnd();
+    generateMatrix(w,h);
 }
 
 function sleep(ms) {
@@ -108,7 +99,7 @@ function mouseClicked(){
     }
 }
 function draw() { 
-    searchIndicator.textContent = isSearching;
+    // searchIndicator.textContent = isSearching;
     drawGrid();
 }
 

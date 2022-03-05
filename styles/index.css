@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -8,14 +11,52 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.buttons{
+.heading{
+    background: bisque;
+    font-size: clamp(1.5rem,4vw,2rem);
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: .4rem;
+}
+.navbar{
+    background: orange;
+    height: clamp(8rem,25vw,8.5rem);
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .wallSwitch{
-    background:white ;
-    padding: 1rem;
+    background: lightcoral;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .3rem .2rem .3rem .2rem;
     border-radius: .5rem;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+button{
+    background:lightgreen;
+    border-style: solid;
+    padding: .3rem;
+    border-radius: .4rem;
+    border-color: darkgreen;
+
+}
+label{
+    margin-right: .3rem;
+    font-size: clamp(.7rem,1.2vw,4rem);
+    font-weight: bold;   
 }
