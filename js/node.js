@@ -21,7 +21,7 @@ class Node {
 
         
     }
-    randomize(n=4) {
+    randomize(n=3) {
         if (random() <= n/10) { 
             this.wall=true;
         }
