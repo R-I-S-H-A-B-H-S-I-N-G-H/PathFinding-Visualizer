@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"
+      integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script defer src="js/sketch.js"></script>
     <script src="js/node.js"></script>
-   <script src="js/breathfirstserach.js"></script>
-   <script src="js/MinHeap.js"></script>
-   <script src="js/matrix.js"></script>
-   <script src="js/astar.js"></script>
-   
-   <link rel="stylesheet" href="styles/index.css">
-    
+    <script src="js/breathfirstserach.js"></script>
+    <script src="js/MinHeap.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/astar.js"></script>
+
+    <link rel="stylesheet" href="styles/index.css" />
+
     <title>Pathfinding</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <div style="display: flex;">
     <h1 >isSearching :</h1>
     <h1 id="isSearching"></h1> -->
-    </div>
+    <!-- </div> -->
     <div class="navbar">
-        <header class="heading">Pathfinding Visualizer</header>
-        <div class="buttons">
-                <div class="wallSwitch">
-                    <input type="checkbox" name="removeWall"
-                    id="removeWall"
-                    onchange="removeWallHandler()"
-                    >
-                    <label for="removeWall">Remove Wall</label>
-
-                </div>
-                <div class="wallSwitch">
-                   
-                    <input type="checkbox" name="createWall"
-                    id="createWall"
-                    onchange="createWallHandler()"
-                    >
-                     <label for="createWall">Create
-                    WALL</label>
-                </div>
-
-
-                <div class="wallSwitch">
-                    <input type="checkbox" name="setStart"
-                    id="setStart"
-                    onchange="setStartHandler()"
-                    >
-                    <label for="setStart">Set Start</label>
-
-                </div>
-                <div class="wallSwitch">
-                    <input type="checkbox" name="setEnd"
-                    id="setEnd"
-                    onchange="setEndHandler()"
-                    >
-                    <label for="setEnd">setEnd</label>
-
-                </div>
-                
-               
-                
-
-                
+      <header class="heading">
+        <a
+          href="https://github.com/R-I-S-H-A-B-H-S-I-N-G-H/PathFinding-Visualizer"
+          rel="source code"
+          target="/"
+        >
+          Pathfinding Visualizer
+        </a>
+      </header>
+      <div class="buttons">
+        <div class="wallSwitch">
+          <input
+            type="checkbox"
+            name="removeWall"
+            id="removeWall"
+            onchange="removeWallHandler()"
+          />
+          <label for="removeWall">Remove Wall</label>
         </div>
-         <div class="algoArea">
-                    <button
-                    onclick="bfs()">BFS</button>
-                    <button
-                    onclick="astar()">ASTAR</button>
-                </div>
-        
+        <div class="wallSwitch">
+          <input
+            type="checkbox"
+            name="createWall"
+            id="createWall"
+            onchange="createWallHandler()"
+          />
+          <label for="createWall">Create WALL</label>
+        </div>
+
+        <div class="wallSwitch">
+          <input
+            type="checkbox"
+            name="setStart"
+            id="setStart"
+            onchange="setStartHandler()"
+          />
+          <label for="setStart">Set Start</label>
+        </div>
+        <div class="wallSwitch">
+          <input
+            type="checkbox"
+            name="setEnd"
+            id="setEnd"
+            onchange="setEndHandler()"
+          />
+          <label for="setEnd">setEnd</label>
+        </div>
+      </div>
+      <div class="algoArea">
+        <button onclick="bfs()">BFS</button>
+        <button onclick="astar()">ASTAR</button>
+      </div>
     </div>
 
     <!--? here canvas -->
     <div id="canvas" class="canvas"></div>
-    
-</body>
+  </body>
 </html>
